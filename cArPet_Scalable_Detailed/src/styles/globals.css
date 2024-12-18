@@ -1,1 +1,172 @@
 // Placeholder for globals.css
+/* ------------------------------
+   Global Reset and Base Styles
+------------------------------- */
+
+/* Resetting margins, paddings, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting default font styles for the entire application */
+html {
+  font-size: 16px; /* Base font size for easy scaling */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Modern sans-serif font */
+  line-height: 1.6; /* Improve readability */
+  color: #333333; /* Default text color */
+  background-color: #f9f9f9; /* Light background for a clean look */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* ------------------------------
+   Layout Utility Classes
+------------------------------- */
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Text alignment utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ------------------------------
+   Typography
+------------------------------- */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", sans-serif;
+  font-weight: 600; /* Bold headings */
+  color: #222222; /* Darker text for headings */
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+  color: #555555; /* Softer text color for paragraphs */
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--primary-color); /* Defined in variables.css */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005bb5; /* Slightly darker shade for hover */
+}
+
+/* ------------------------------
+   Buttons
+------------------------------- */
+
+/* Default button styles */
+button {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Primary button */
+button.primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+button.primary:hover {
+  background-color: #005bb5; /* Darker blue for hover */
+}
+
+/* Secondary button */
+button.secondary {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+button.secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* General button hover effect */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   Spacing Utilities
+------------------------------- */
+
+/* Margin utilities */
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.ml-1 { margin-left: 1rem; }
+.mr-1 { margin-right: 1rem; }
+
+/* Padding utilities */
+.pt-1 { padding-top: 1rem; }
+.pb-1 { padding-bottom: 1rem; }
+.pl-1 { padding-left: 1rem; }
+.pr-1 { padding-right: 1rem; }
+
+/* ------------------------------
+   Responsive Design
+------------------------------- */
+
+/* Mobile first adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Reduce base font size for smaller screens */
+  }
+
+  .flex-space-between {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  button {
+    width: 100%; /* Full-width buttons for mobile */
+    margin-bottom: 0.5rem; /* Add spacing between buttons */
+  }
+}
+
